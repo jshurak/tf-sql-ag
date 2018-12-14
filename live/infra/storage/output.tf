@@ -9,3 +9,7 @@ output "state-container-name" {
 output "diagnostics_storage_account_name" {
     value   = "${azurerm_storage_account.diagnostics.name}"
 }
+
+output "diagnostics_storage_uri" {
+    value   = "https://${azurerm_storage_account.diagnostics.name}.blob.core.windows.net"
+}

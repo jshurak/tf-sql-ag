@@ -63,7 +63,7 @@ resource "azurerm_virtual_machine" "dc" {
 
     boot_diagnostics {
         enabled         = true
-        storage_uri     = "${data.terraform_remote_state.storage.diagnostics_storage_account_name}"
+        storage_uri     = "${data.terraform_remote_state.storage.diagnostics_storage_uri}"
     }
 
     storage_image_reference {
